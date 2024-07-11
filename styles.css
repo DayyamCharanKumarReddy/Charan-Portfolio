@@ -1,0 +1,484 @@
+/* Reset margins and paddings, set default font-family and box-sizing */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+}
+html{
+  scroll-behavior: smooth;
+}
+body {
+  background: #080808;
+  color: #fff;
+}
+
+/* Style the header section */
+#header {
+  width: 100%;
+  height: 100vh;
+  background-image: url('images/port back.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+/* Add padding to the container */
+.container {
+  padding: 10px 10%;
+}
+
+/* Style the navigation bar */
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+/* Set width for the logo */
+.logo {
+  width: 140px;
+  color: red;
+}
+
+/* Remove list styles from navigation */
+nav ul {
+  list-style: none;
+}
+
+/* Style individual list items */
+nav ul li {
+  display: inline-block;
+  margin: 10px 20px;
+}
+
+/* Style navigation links */
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px; /* Reduced font size */
+  position: relative;
+}
+
+/* Add a bottom border to navigation links on hover */
+nav ul li a::after {
+  content: '';
+  width: 0;
+  height: 3px; 
+  background: #ff004f;
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  transition: 0.15s;
+}
+
+/* Expand the bottom border on hover */
+nav ul li a:hover::after {
+  width: 100%;
+}
+
+/* Style for the header text container */
+.header-text {
+  margin-top: 20%;
+  text-align: left;
+}
+
+/* Style the paragraph in the header text */
+.header-text p {
+  font-size: 24px; /* Reduced font size */
+}
+
+/* Style the main heading in the header text */
+.header-text h1 {
+  font-size: 48px; /* Reduced font size */
+  margin-top: 20px;
+}
+
+/* Style the highlighted text in the main heading */
+.header-text h1 span {
+  color: red;
+}
+
+/* Style for the About section */
+#about {
+  padding: 50px 0;
+}
+
+/* Style for the About section's row */
+.row {
+  display: flex;
+  align-items: flex-start;
+}
+
+/* Style for the About section's first column */
+.about-col-1 {
+  flex-basis: 35%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* Style for the image in the About section's first column */
+.about-col-1 img {
+  width: 100%;
+  border-radius: 15px;
+  margin-bottom: 20px;
+}
+
+/* Style for the About section's second column */
+.about-col-2 {
+  flex-basis: 60%;
+  padding-left: 20px;
+}
+
+/* Style for the subtitle in the About section */
+.sub-title {
+  font-size: 48px; /* Reduced font size */
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+/* Style for the paragraph in the About section */
+.about-col-2 p {
+  font-size: 16px;
+  line-height: 1.6;
+}
+.sub-title{
+  font-size: 60px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.tab-titles{
+  display: flex;
+  margin: 20px 0 40px;
+}
+/* Ensure the parent container is positioned relative */
+.tab-links{
+  margin-right: 50px;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  position: relative;
+}
+/* After pseudo-element for the underline */
+.tab-links::after {
+  content: '';
+  width: 0;
+  height: 3px;
+  background: #ff004f;
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  transition: 0.15s;
+}
+.tab-links.active-link::after {
+  width: 50%;
+}
+.tab-contents ul li{
+  list-style: none;
+  margin: 10px 0;
+}
+.tab-contents ul li span {
+  color: #b54769;
+  font-size: 14px;
+}
+.tab-contents{
+  display: none;
+}
+.tab-contents.active-tab{
+  display: block;
+}
+
+/*-----------------servicse-------------*/
+
+#services {
+  padding: 30px 0;
+}
+
+.services-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 40px;
+  margin-top: 50px;
+}
+.services-list div{
+  background: #262626;
+  padding: 40px;
+  font-size: 13px;
+  font-weight: 300;
+  border-radius: 10px;
+  transition: background 0.15s, transform 0.15s;
+}
+.services-list div i{
+  font-size: 50px;
+margin-bottom: 30px;
+}
+
+.services-list div h2 {
+  font-size: 30px;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+.services-list div a{
+  text-decoration: none;
+  color: white;
+  font-size: 12px;
+  margin-top: 20px;
+  display: inline-block;
+}
+.services-list div:hover{
+  background: #ff004f;
+  transform: translateY(-10px);
+}
+
+/*-----------Portfolio-----------*/
+
+#portfolio {
+  padding: 50px 0;
+}
+.work-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 40px;
+  margin-top: 50px;
+}
+
+.work{
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+}
+.work img{
+  width: 100%;
+  border-radius: 10px;
+  display: block;
+  transition: transform 0.15s;
+}
+
+.layer{
+  width: 100%;
+  height: 0;
+  background: linear-gradient(rgba(0,0,0,0.6), #ff004f);
+  border-radius: 10px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 40px;
+  text-align: center;
+  font-size: 14px;
+  transition: height 0.15s;
+}
+
+.layer h3{
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.layer a{
+  margin: 20px;
+  color: #ff004f;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 60px;
+  background: #fff;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  text-align: center;
+}
+.work:hover img{
+  transform: scale(1.1);
+}
+.work:hover .layer{
+  height: 100%;
+}
+
+.btn{
+  display: block;
+  margin: 50px auto;
+  width: fit-content;
+  border: 1px solid #ff004f;
+  padding: 14px 50px;
+  border-radius: 6px;
+  text-decoration: none;
+  color: white;
+  transition: background 0.15s;
+}
+.btn:hover{
+  background: #ff004f;
+}
+
+/*-------------contact-----------*/
+
+.contact-left{
+  flex-basis: 35%;
+}
+.contact-right{
+  flex-basis: 60%;
+  
+}
+
+.contact-left p{
+  margin-top: 30px;
+}
+
+
+.contact-right {
+  text-align: right;
+}
+
+.contact-right form {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.contact-left p i{
+  color: #ff004f;
+  font-size: 25px;
+  margin-right: 15px;
+}
+
+.social-icons a{
+  text-decoration: none;
+  font-size: 30px;
+  margin-right: 15px;
+  margin-top: 15px;
+  color: #ababab;
+  display: inline-block;
+  transition: transform 0.15s;
+}
+.social-icons a:hover{
+  color: #ff004f;
+  transform: translateY(-5px);
+
+}
+
+.btn.btn2{
+  display: inline-block;
+  background: #ff004f;
+}
+.contact-right form {
+  width: 100%;
+}
+form input, form textarea{
+  width: 100%;
+  border: 0;
+  outline: none;
+  background: #262626;
+  padding: 15px;
+  margin: 15px;
+  color: #fff;
+  font-size: 18px;
+  border-radius: 6px;
+}
+
+form .btn2{
+  padding: 14px 60px;
+  font-size: 18px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+.copyright {
+  width: 100%;
+  text-align: center;
+  padding: 25px 0;
+  background: #262626;
+  font-weight: 300;
+  margin-top: 20px;
+}
+
+.copyright i {
+  color: #ff004f;
+}
+
+/*---------------------------------css for small screen-------------------------------------------*/
+
+nav .fas {
+  display: none; /* Hide the FontAwesome icons by default */
+}
+
+@media screen and (max-width: 600px) {
+  .header {
+    background-image: url(images/phone-background.png);
+  }
+  .header-text {
+    margin-top: 100%;
+    font-size: 16px;
+  }
+  .header-text h1 {
+    font-size: 30px;
+  }
+  nav .fas {
+    display: block; /* Display FontAwesome icons on smaller screens */
+    font-size: 25px;
+    position: absolute;
+    top: 10px; /* Adjust as needed */
+    right: 10px; /* Adjust as needed */
+    cursor: pointer;
+    color: #fff;
+    z-index: 3; /* Ensure icons are above the side menu */
+  }
+  nav ul {
+    background: #ff004f;
+    position: fixed;
+    top: 0;
+    right: -200px;
+    width: 200px;
+    height: 100vh;
+    padding-top: 50px;
+    z-index: 2;
+    transition: right 0.15s;
+  }
+  nav ul.open {
+    right: 0; /* Slide the menu in when the 'open' class is added */
+  }
+  nav ul li {
+    display: block;
+    margin: 25px;
+  }
+  .close-menu {
+    position: absolute;
+    top: 10px; /* Adjust as needed */
+    left: 10px; /* Adjust as needed */
+    cursor: pointer;
+    color: #fff;
+    z-index: 3; /* Ensure the close button is above the side menu */
+  }
+  .sub-title{
+    font-size: 40px;
+  }
+  .about-col-1, .about-col-2{
+    flex-basis: 100%;
+  }
+  .about-col-1{
+    margin-bottom: 30px;
+  }
+  .about-col-2{
+    font-size: 14px;
+  }
+  .tab-links{
+    font-size: 16px;
+    margin-right: 20px;
+  }
+  .contact-left, .contact-right{
+    flex-basis: 100%;
+  }
+  .copyright{
+    font-size: 14px;
+  }
+}
+
+
+#msg{
+  color: #61b752;
+  margin-top: -40px;
+  display: block;
+}
